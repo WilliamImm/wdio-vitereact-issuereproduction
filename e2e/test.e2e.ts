@@ -23,7 +23,7 @@ describe("Test App", () => {
     const { findByAltText } = setupBrowser(browser as unknown as BrowserBase);
 
     const reactLogo = await findByAltText("React logo");
-    expect(reactLogo).toBeDisplayed();
+    await expect(reactLogo).toBeDisplayed();
   });
 
   it("should increment count", async () => {
@@ -31,8 +31,8 @@ describe("Test App", () => {
     const { findByText } = setupBrowser(browser as unknown as BrowserBase);
 
     const countButton = await findByText(/count is ?/);
-    expect(countButton).toHaveText("count is 0");
+    await expect(countButton).toHaveText("count is 0");
     countButton.click();
-    expect(countButton).toHaveText("count is 1");
+    await expect(countButton).toHaveText("count is 1");
   });
 });
