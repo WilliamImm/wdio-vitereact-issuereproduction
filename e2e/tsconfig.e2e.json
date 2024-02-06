@@ -5,6 +5,6 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
-    "types": ["node", "@wdio/globals/types", "@wdio/mocha-framework"]
+    "types": ["@wdio/globals/types", "@wdio/mocha-framework"]
   }
 }
